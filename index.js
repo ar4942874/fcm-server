@@ -4,7 +4,7 @@ import admin from 'firebase-admin';
 import fs from 'fs';
 
 // Load service account key from file
-const serviceAccount = JSON.parse(fs.readFileSync('./serviceAccountKey.json', 'utf8'));
+const serviceAccount = JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON);
 
 // Initialize Firebase Admin SDK
 admin.initializeApp({
